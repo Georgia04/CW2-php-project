@@ -1,4 +1,4 @@
-# bnu-php-example
+# Open Source Systems-php-CW2
 
 This script is for students at Bucks New Uni learning PHP in the "Open Source Systems" module. It is also a good starter project for anyone who is looking to learn PHP and MySQL.
 
