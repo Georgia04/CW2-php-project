@@ -1,12 +1,19 @@
+<?php
+echo template("templates/partials/header.php");
+echo $message; ?>
 
-<?php echo $message; ?>
-
-<form name="frmLogin" action="authenticate.php" method="post">
-   Student ID:
-   <input name="txtid" type="text" />
-   <br/>
-   Password:
-   <input name="txtpwd" type="password" />
-   <br/>
-   <input type="submit" value="Login" name="btnlogin" />
-</form>
+<div class="Container">
+   <div class="justify-content-center">
+      <form class="border rounded" name="frmLogin" action="authenticate.php" method="post">
+         <div class="form-group mb-3">
+            <label for="inputStudentID"> Student ID: </label>
+            <input name="txtid" type="text" class="form-control" />
+         </div>
+         <div class="form-group mb-3">
+            <label for="inputPassword"> Password: </label>
+            <input name="txtpwd" type="password" placeholder="Password" class="form-control" />
+         </div>
+         <button type="submit" class="btn btn-primary" value="Login" name="btnlogin">Login</button>
+      </form>
+   </div>
+</div>
