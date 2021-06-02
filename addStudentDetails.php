@@ -9,21 +9,25 @@
     {
         $firstname = mysqli_real_escape_string($conn, $_POST['firstname']);
         $lastname = mysqli_real_escape_string($conn, $_POST['lastname']);
-        $house = mysqli_real_escape_string($conn, $_POST['address']);
-        $town = mysqli_real_escape_string($conn, $_POST['town']);
-        $county = mysqli_real_escape_string($conn, $_POST['county']);
-        $country = mysqli_real_escape_string($conn, $_POST['country']);
-        $postcode = mysqli_real_escape_string($conn, $_POST['postcode']);
-        $dob = mysqli_real_escape_string($conn, $_POST['dob']);
+        $house = mysqli_real_escape_string($conn, $_POST['dob']);
+        $town = mysqli_real_escape_string($conn, $_POST['house']);
+        $county = mysqli_real_escape_string($conn, $_POST['town']);
+        $country = mysqli_real_escape_string($conn, $_POST['county']);
+        $postcode = mysqli_real_escape_string($conn, $_POST['country']);
+        $dob = mysqli_real_escape_string($conn, $_POST['postcode']);
         $password = mysqli_real_escape_string($conn, $_POST['password']);
 
         if (empty($firstname)) {array_push($errors, "Please enter your first name");}
         if (empty($lastname)) {array_push($errors, "Please enter your last name");}
-        if (empty($house)) {array_push($errors, "Please enter address line one");}
+        if (empty($dob)) {array_push($errors, "Please enter your date of birth");}
+        if (empty($house)) {array_push($errors, "Please enter your address line");}
         if (empty($town)) {array_push($errors, "Please enter your town");}
-        if (empty($county)) {array_push($errors, "Please enter county");}
-        if (empty($country)) {array_push($errors, "Please enter a country");}
-        if (empty($postcode)) {array_push($errors, "Please enter your postcode");}
+        if (empty($county)) {array_push($errors, "Please enter a county");}
+        if (empty($country)) {array_push($errors, "Please enter your country");}
+        if (empty($postcode)) {array_push($errors, "Please enter your postcode");}  
+        if (empty($password)) {array_push($errors, "Please enter your password");}  
+         
+            
 
         if(count($errors) == 0)
         {
@@ -39,7 +43,7 @@
             } 
             else
             {
-                echo "Error: Unfortunatelly action has been failed $query ." . mysqli_error($conn);
+                echo "Error: Unfortunatelly action has been failed. Try again. $query ." . mysqli_error($conn);
             }
         }
 
@@ -53,11 +57,11 @@
         $target = "img/".basename($image);
   
         $sql = "INSERT INTO images (studentimage) VALUES ('$image')";
-        // execute query
+        // execute 
         mysqli_query($db, $sql);
   
         if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-            $msg = "Image uploaded successfully";
+            $msg = "Image has been successfully uploaded";
         }else{
             $msg = "Upload image failed";
         }

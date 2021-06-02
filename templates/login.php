@@ -2,7 +2,7 @@
 echo template("templates/partials/header.php");
 echo $message; ?>
 
-<div class="Container">
+<div class="Container" style="align">
    <div class="justify-content-center">
       <form class="border rounded" name="frmLogin" action="authenticate.php" method="post">
          <div class="form-group mb-3">

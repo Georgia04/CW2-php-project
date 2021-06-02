@@ -1,13 +1,16 @@
-<footer class="page-footer text-white font-small bg-dark">
+<style>
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(96, 185, 244) ;
+  color: white;
+  text-align: center;
+}
+</style>
 
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-2">© 2021 Copyright:
-    <p> Bucks New University</p>
-  </div>
-  <!-- Copyright -->
-
-</footer>
-   </body>
-
-</html>
+<div class="footer">© 2021 Copyright:
+  <p>Bucks New University</p>
+</div>
  

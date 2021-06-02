@@ -11,15 +11,15 @@ $sql = "SELECT studentid, dob, firstname, lastname, house, town,
 $result = mysqli_query($conn, $sql);
 ?>
 <div class="container">
-    <form class="border border-white rounded" method="post" action="actionDelete.php" onsubmit="return deleteConfirm();">
-        <table class="table table-bordered">
+    <form class="border border-dark rounded" method="post" action="deleteButton.php" onsubmit="return deleteConfirm();">
+        <table class="table table-striped">
             <tr>
                 <th><input type="checkbox" name="checkAll" id="checkAll"> Select All </th>
                 <th>Student ID</th>
                 <th>Student First Name</th>
                 <th>Student Last Name</th>
                 <th>Date of Birth</th>
-                <th>Street Address</th>
+                <th>Address</th>
                 <th>Town</th>
                 <th>County</th>
                 <th>Country</th>
@@ -47,7 +47,7 @@ $result = mysqli_query($conn, $sql);
             ?>
 
         </table>
-        <p class="text-center"><button type='submit' class='btn btn-danger btn-lg btn-block' name='checkbox_delete'> Delete </button></p>
+        <p class="text-center"><button type='submit' class='btn btn-warning btn-lg btn-block' name='checkbox_delete'> Delete </button></p>
     </form>
 </div>
 <script type="text/javascript">
