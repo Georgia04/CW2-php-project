@@ -16,8 +16,8 @@ $result = mysqli_query($conn, $sql);
             <tr>
                 <th><input type="checkbox" name="checkAll" id="checkAll"> Select All </th>
                 <th>Student ID</th>
-                <th>Student First Name</th>
-                <th>Student Last Name</th>
+                <th>First Name</th>
+                <th>Last Name</th>
                 <th>Date of Birth</th>
                 <th>Address</th>
                 <th>Town</th>
