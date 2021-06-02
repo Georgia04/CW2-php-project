@@ -62,7 +62,7 @@ echo template("templates/partials/nav.php");
             </div>
 
             <div class="form-group">
-                <label class="form-label" for="customFile">Upload student photo :</label>
+                <label class="form-label" for="customFile">Upload photo :</label>
                 <input type="file" name="studentImage" class="form-control" accept="image/jpg" />
             </div>
 
